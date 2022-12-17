@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<head>
+    <html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoMobMechanic</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'josefin Sans', sans-serif;
+        }
+
+        .hero {
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-image: url(wp5052857-car-workshop-wallpapers.jpg);
+        }
+        .logo {
+            color: #F9D342;
+            font-size: 28px;
+            border-radius: 5px;
+
+        }
+    
+        span {
+            color: #000000;
+            background-color: #F9D342;
+            border-radius: 5px;
+            font-size: 28px;
+            font-weight: bolder;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 20px;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        nav ul li {
+            list-style-type: none;
+            display: inline-block;
+            padding: 20px 20px;
+        }
+
+        nav ul li a {
+            color: #F9D342;
+            text-decoration: none;
+            font-weight: bolder;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        nav ul li :hover {
+            color: #49e2e7;
+            transition: .3s;
+            transform: scale(1.4);
+            cursor: pointer;
+        }
+
+        li:hover {
+            transform: scale(1.3);
+            cursor: pointer;
+        }
+
+        .no-underline {
+            border: none;
+            background-color: #F9D342;
+            padding: 12px 30px;
+            border-radius: 20px;
+            color: #000000;
+            font-weight: bold;
+            font-size: 15px;
+            transition: .4s;
+            list-style-type: none;
+            text-decoration: none;
+        }
+
+        .no-underline:hover {
+            transform: scale(1.3);
+            cursor: pointer;
+        }
+
+        .info {
+            height: 65vh;
+            width: 70%;
+            margin: 0 auto;
+            margin-top: 10px;
+            color: #49e2e7;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding-top: 20px;
+            padding: 30px;
+            border-radius: 15px;
+            font-size: 23px;
+            font-family: fantasy;
+            font-style: italic;
+        }
+
+        p {
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .dive-box {
+                width: 95%;
+            }
+        }
+
+        b {
+            color: #F9D342;
+            font-size: 22px;
+        }
+
+        .contact {
+            color: #49e2e7;
+            text-decoration: underline;
+        }
+
+        .contact:hover {
+            color: #F9D342;
+        }
+
+        .explore {
+            border: solid #49e2e7 1px;
+            background-color: #F9D342;
+            color: #292826;
+            padding: 12px 23px;
+            margin-top: 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-style: oblique;
+            font-size: 17px;
+            transition: .4s;
+            list-style-type: none;
+            text-decoration: none;
+        }
+
+        .explore:hover {
+            color: #F9D342;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            transform: scale(1.3);
+            cursor: pointer;
+        }
+
+        .expo {
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        .about {
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-image: url(about.jpg);
+        }
+
+        .aboutus {
+            height: 85vh;
+            width: 70%;
+            margin: 0 auto;
+            position: relative;
+            top: 45px;
+            color: #92d7da;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            font-size: 18px;
+            font-style: italic;
+            border-radius: 10px;
+        }
+
+        .contactus {
+            height: 75vh;
+            width: 100%;
+            background-color: #F9D342;
+        }
+
+        .cont {
+            height: 55vh;
+            width: 80%;
+            margin: 0 auto;
+            color: #F9D342;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            list-style-type: none;
+            padding: 20px 20px;
+            position: relative;
+            top: 65px;
+        }
+
+        .same {
+            list-style-type: none;
+            display: inline-block;
+            padding: 50px;
+            padding-bottom: 55px;
+            color: #F9D342;
+            text-decoration: none;
+            font-weight: bolder;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .same:hover {
+            color: #26b9be;
+            transition: .3s;
+            transform: scale(1.4);
+            cursor: pointer;
+        }
+
+        .help {
+            list-style-type: none;
+            display: inline-block;
+            padding: 25px;
+            color: #F9D342;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: monospace;
+        }
+
+        .help:hover {
+            transform: scale(1);
+            cursor: pointer;
+            color: darkgrey;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <nav>
+            <div class="symbol">
+                <h2 class="logo">&ensp;AutoMob&ensp;<br> </h2>
+                    <Span>&ensp;Mechanic&ensp;</Span>
+               
+            </div>
+            <ul>
+                <li><a>Home</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#para">About</a></li>
+                <li><a href="#contactid">Contact</a></li>
+            </ul>
+            <a onclick="login()" class="no-underline">Login</a>
+        </nav>
+        <div class="info">
+            <p><b>AutoMob-Mechanic</b> is a well-established automobile service and repair company that has
+                been serving the community for over 10 years. Our team of highly trained and experienced mechanics is
+                dedicated to providing top-quality service to our customers.</p>
+            <p> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;If you're in need of reliable and
+                trustworthy automobile service and repair, look no further than
+                AutoMob-Mechanic. <a class="contact" href="#contactid">Contact us </a> today to schedule an appointment or to
+                learn more about the services we
+                offer.</p>
+            <div class="expo">
+                <button class="explore" onclick="explore()">Explore More</button>
+            </div>
+        </div>
+    </div>
+    <div class="about" id="para">
+        <div class="aboutus">
+            <p>
+                <b>AutoMob-Mechanic</b> is a highly respected and successful automobile service and repair company that
+                has been serving the community for more than 10 years. The company is owned and operated by a skilled
+                and
+                experienced mechanic named AutoMob-Mechanic, who is well-known for his expertise and professionalism.
+            </p>
+            <p>
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;The team at AutoMob-Mechanic is dedicated to providing
+                top-quality services to their customers. They offer a wide range of services, including oil changes,
+                tire rotations, brake repairs, and more. They are also
+                able to handle more specialized repairs such as transmission repairs and engine overhauls.
+            </p>
+            <p>
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In addition to their technical skills, the team at
+                AutoMob-Mechanic places a strong emphasis on customer
+                service. They understand that having a vehicle repaired or serviced can be a stressful experience, and
+                they work to make the process as smooth and stress-free as possible for their customers. They are able
+                to
+                explain repair procedures and estimates in a clear and concise manner, and they have a system in place
+                for
+                handling customer complaints and concerns.
+            </p>
+            <p>
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Overall, AutoMob-Mechanic is a reliable and trustworthy choice
+                for anyone in need of vehicle maintenance or repair services. With a team of skilled technicians and a
+                commitment to excellent customer service, the
+                company has earned a reputation for excellence in the local community.
+            </p>
+        </div>
+    </div>
+    <div class="contactus">
+        <div class="cont" id="contactid">
+            <ul>
+                <li id="add" class="same">
+                    <p>AutoMob-Mechanic <br>
+                        123 Main Street<br>
+                        karwar, karnataka 12345
+                    </p>
+                </li>
+                <li id="phone" class="same">
+                    <p>Phone: 555-555-1212<br>
+                        Email: service@automobmechanic.com<br>
+                    </p>
+                </li>
+                <li id="time" class="same">
+                    <p>Monday-Friday, <br>8:00 am to 5:00 pm.<br>closed on Saturdays
+                        and Sundays.
+                    </p>
+                </li>
+
+                <h4 class="help">
+                    If you have any questions or need to schedule a service appointment, please don't
+                    hesitate to
+                    give us a call or send us an email. Our team of experienced technicians is here to help you with
+                    all of your automotive
+                    needs.We look forward to serving you!
+                </h4>
+
+            </ul>
+        </div>
+    </div>
+    <script>
+        function explore() {
+            window.open("service.html", "_self");
+        }
+        function login() {
+            window.open("login.html", "_self");
+        }
+
+        const symbolDiv = document.querySelector("div.symbol");
+        const logoH2 = document.querySelector("h2.logo");
+        const span = document.querySelector("span");
+
+        symbolDiv.addEventListener("mouseenter", function () {
+            logoH2.style.color = "#000000";
+            logoH2.style.backgroundColor = "#F9D342";
+            span.style.color="#F9D342"
+            span.style.backgroundColor = "rgba(0, 0, 0, 0)";
+        });
+
+        symbolDiv.addEventListener("mouseleave", function () {
+            logoH2.style.color = "#F9D342";
+            logoH2.style.backgroundColor = "";
+            span.style.color="#000000"
+            span.style.backgroundColor = "#F9D342";
+        });
+
+    </script>
+</body>
+
+</html>
